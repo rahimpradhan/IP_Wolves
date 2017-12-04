@@ -24,4 +24,8 @@ module.exports = function(app) {
   app.get("/contact", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/contact.html"));
   });
+   // faq route loads contact.html
+  app.get("/faq", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/faq.html"));
+  });
 };

@@ -10,14 +10,29 @@
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 	
 	<!-- Bootstrap itself -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="assets/css/magister.css">
 
 	<!-- Fonts -->
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 500px;
+        /*width: auto;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 
 <!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
@@ -33,6 +48,7 @@
 				<li><a href="main.html">Whos scanning?</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="contact.html">Contact</a></li>
+				<li><a href="faq.html">FAQ</a></li>
 			</ul>
 		</div>
 	</div>
@@ -44,21 +60,8 @@
 		<div class="row">
 			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	<h2 class="subtitle">Who's trying to blow down your port?</h2>
 
-				<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 500px;
-        /*width: auto;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
+		
+  
   <body>
     <div id="map"></div>
     <script>
@@ -90,16 +93,20 @@
         });
       }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5gRfzy1tvQrvG8QEab2h17d50bhkEpOk&callback=initMap">
-    </script>
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5gRfzy1tvQrvG8QEab2h17d50bhkEpOk&callback=initMap">
+		    </script>
 	
-			</div> <!-- /col -->
-		</div> <!-- /row -->
+			</div>
+		</div> 
 	
 	</div>
 </section>
-<div class="lastestIP"></div>
+
+
+	<div id="current">
+		
+		</div>
 <footer class="footer-basic-centered">
 
 			<p class="footer-company-motto">IP Wolves</p>
@@ -113,19 +120,20 @@
 				·
 				<a href="contact.html">Contact</a>
 				·
+				<a href="faq.html">FAQ</a>
 			</p>
+				
 				
 
 			<p class="footer-company-name">IP Wolves &copy; 2017</p>
 
-		</footer>
+</footer>
 
 
 <!-- Load js libs only when the page is loaded. -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="assets/js/modernizr.custom.72241.js"></script>
-<script src="assets/js/IpUpdate.js" type="text/javascript"></script>
 <!-- Custom template scripts -->
 <!-- <script src="assets/js/magister.js"></script> -->
 <script>document.body.className += ' fade-out';</script>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	
+	
+	<title>IP Wolves</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap itself -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/magister.css">
+
+	<!-- Fonts -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+<body class="theme-invert">
+
+<nav class="mainmenu">
+	<div class="container">
+		<div class="dropdown">
+			<button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="main.html">Whos scanning?</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section class="section" id="head">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">	<h2 class="subtitle">Who's trying to blow down your port?</h2>
+
+				<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 500px;
+        /*width: auto;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: new google.maps.LatLng(23, 15),
+          mapTypeId: 'roadmap'
+        });
+
+        var wolfIcon = "assets/images/gt_favicon.png";
+
+        var ipToMap = [
+          {
+            position: new google.maps.LatLng(23, 15)
+          }, {
+            position: new google.maps.LatLng(-33.91539, 151.22820)
+          } 
+        ];
+
+        // Create markers.
+        ipToMap.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: wolfIcon,
+            map: map
+          });
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5gRfzy1tvQrvG8QEab2h17d50bhkEpOk&callback=initMap">
+    </script>
+	
+			</div> <!-- /col -->
+		</div> <!-- /row -->
+	
+	</div>
+</section>
+<div class="lastestIP"></div>
+<footer class="footer-basic-centered">
+
+			<p class="footer-company-motto">IP Wolves</p>
+
+			<p class="footer-links">
+				<a href="index.html">Home</a>
+				·
+				<a href="main.html">Who's scanning?</a>
+				·
+				<a href="about.html">About Us</a>
+				·
+				<a href="contact.html">Contact</a>
+				·
+			</p>
+				
+
+			<p class="footer-company-name">IP Wolves &copy; 2017</p>
+
+		</footer>
+
+
+<!-- Load js libs only when the page is loaded. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="assets/js/modernizr.custom.72241.js"></script>
+<script src="assets/js/IpUpdate.js" type="text/javascript"></script>
+<!-- Custom template scripts -->
+<!-- <script src="assets/js/magister.js"></script> -->
+<script>document.body.className += ' fade-out';</script>
+<script type="text/javascript">
+	$(function() {
+    $('body').removeClass('fade-out');
+});
+</script>
+
+
+</body>
+</html>

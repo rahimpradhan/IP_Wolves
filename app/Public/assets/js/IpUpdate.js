@@ -5,14 +5,16 @@ $(document).ready(function() {
 
 
     getIPs();
-
+    //function to get all rows from table IPS from dtabase. then passing it to IPs object.
+    //Once Done it will run getgeo function.
+    //Once getgeo is done it will run getlatest function
     function getIPs() {
         $.get("/api/ips", function(data) {
             IPs = data;
             console.log(IPs);
         }).done(getgeo).done(getLatest);
     }
-
+    //it will get the info for last entry row in database and show the info below the map
     function getLatest() {
         $.get("/api/ips/latest", function(data) {
             lastIP = data;
@@ -21,7 +23,8 @@ $(document).ready(function() {
 
         })
     }
-
+    //it will process each IP in the IPs object, pass it to IP API call to get location details
+    //then it will update each row in database based on the id with location details using updateIPs function.
     function getgeo(){
         IPs.forEach(function(ip){
 
@@ -49,10 +52,11 @@ $(document).ready(function() {
         })
 
     }
+    
 
 
 
-
+    //function to use api routes for PUT, which will update lon,lat, city, State and  Country based on the Id of each row.
     function updateIPs(ip) {
         $.ajax({
             method: "PUT",

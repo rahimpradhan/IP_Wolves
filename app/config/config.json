@@ -1,6 +1,9 @@
 {
   "development": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": "_ycFSEeJe!Bdyx*H6w5e6_"
+    "database": "betaIPwolvesDB",
+    "host": "173.43.88.37:3306",
     "dialect": "mysql"
   },
   "test": {

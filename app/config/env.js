@@ -1,0 +1,1 @@
+JAWSDB_URL="mysql://ipwolvesuserarash:23aycFSEeJeBdyxH6w5e6@73.43.88.37:3306/betaIPwolvesDB";

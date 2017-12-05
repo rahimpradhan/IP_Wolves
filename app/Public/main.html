@@ -82,8 +82,8 @@
            
           var newArr = dbIP.map(ipInfo => {
             var obj = {};
-            obj.lat = ipInfo.longitude;
-            obj.long = ipInfo.latitude;
+            obj.long = ipInfo.longitude;
+            obj.lat = ipInfo.latitude;
             return obj;
           });
           console.log('newArr: ', newArr);
